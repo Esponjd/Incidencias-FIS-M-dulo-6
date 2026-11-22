@@ -2,11 +2,11 @@
 
 Copia del proyecto base LABFIS donde el **Grupo 6** implementa, en el espacio del módulo 06, la **Gestión de incidencias y reparaciones** (7 HU, 28 casos de prueba).
 
-- 📘 Documentación del módulo: [docs/modulo6_incidencias.md](docs/modulo6_incidencias.md)
-- 🗄️ Base de datos (modelo, RLS, verificación): [docs/base_de_datos_modulo6.md](docs/base_de_datos_modulo6.md)
-- 🧪 Casos de prueba: [docs/evidencias/siglab_casos_de_prueba.xlsx](docs/evidencias/siglab_casos_de_prueba.xlsx)
-- 💾 SQL: `supabase/02_modulo6_incidencias.sql` (esquema) y `supabase/03_modulo6_seed_pruebas.sql` (datos de prueba opcionales)
-- 💻 Código: `src/modules/incidencias/`
+- Documentación del módulo: [docs/modulo6_incidencias.md](docs/modulo6_incidencias.md)
+- Base de datos (modelo, RLS, verificación): [docs/base_de_datos_modulo6.md](docs/base_de_datos_modulo6.md)
+- Casos de prueba: [docs/evidencias/siglab_casos_de_prueba.xlsx](docs/evidencias/siglab_casos_de_prueba.xlsx)
+- SQL: `supabase/02_modulo6_incidencias.sql` (esquema) y `supabase/03_modulo6_seed_pruebas.sql` (datos de prueba opcionales)
+- Código: `src/modules/incidencias/`
 
 ---
 
@@ -14,16 +14,16 @@ Copia del proyecto base LABFIS donde el **Grupo 6** implementa, en el espacio de
 
 Aplicación React/Vite con estilo común y navegación a ocho módulos, un ejemplo docente **funcional** de solicitudes de impresión 3D y conexión a PostgreSQL mediante Supabase Auth y RLS.
 
-## Qué está implementado y qué no
+## Qué está implementado
 
-- ✅ Portada + menú de los 8 módulos LABFIS.
-- ✅ Ejemplo docente de impresión 3D: insertar y consultar solicitudes en **PostgreSQL** una vez configurado Supabase.
-- ✅ Formulario de registro e ingreso de usuarios por correo/contraseña; la confirmación de correo depende de configuración de Supabase.
-- ✅ Políticas RLS que aíslan los registros de cada cuenta.
-- ⏳ Los 8 módulos tienen **plantillas de trabajo**, no funcionalidades finales ni tablas propias todavía.
-- ⏳ Integración multiusuario por equipos, permisos de personal LABFIS y despliegue: no incluidos.
+- Portada + menú de los 8 módulos LABFIS.
+- Ejemplo docente de impresión 3D: insertar y consultar solicitudes en **PostgreSQL** una vez configurado Supabase.
+- Formulario de registro e ingreso de usuarios por correo/contraseña; la confirmación de correo depende de configuración de Supabase.
+- Políticas RLS que aíslan los registros de cada cuenta.
+- Los 8 módulos tienen **plantillas de trabajo**, no funcionalidades finales ni tablas propias todavía.
+- Integración multiusuario por equipos, permisos de personal LABFIS y despliegue: no incluidos.
 
-## Ruta rápida A: StackBlitz (sin instalaciones)
+## Ruta rápida A: StackBlitz
 
 1. Descomprime el ZIP y sube la carpeta **labfis-base** a un repositorio de GitHub. No incluyas `.env.local`.
 2. Abre `https://stackblitz.com/github/USUARIO/REPOSITORIO` (reemplaza con tu URL). Si tu repositorio es privado, usa el flujo de importación privada de StackBlitz según tu plan.
@@ -60,7 +60,6 @@ VITE_SUPABASE_PUBLISHABLE_KEY=TU_CLAVE_PUBLICABLE
 7. Ve a **Impresión 3D**. Registra una solicitud y comprueba que aparece en el listado.
 8. Abre Supabase **Table Editor → printing_requests** para comprobar que se almacenó en PostgreSQL. Recarga la página y verifica que permanece.
 
-**Seguridad**: la clave publicable se usa en el cliente con RLS; nunca pegues `service_role`, `sb_secret_*`, contraseñas de BD ni JWT privados en variables `VITE_*`.
 
 ## Con qué trabaja cada equipo
 
@@ -84,7 +83,6 @@ Como estudiante quiero registrar una solicitud de impresión 3D, indicando descr
 - CA01: Descripción obligatoria.
 - CA02: Cantidad válida, mínimo 1.
 - CA03: Registro visible tras guardar y recargar.
-- CA04: Estado inicial **Pendiente**.
 
 ## Archivos más importantes
 
