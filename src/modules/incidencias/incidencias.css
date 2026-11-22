@@ -1,0 +1,54 @@
+/* Estilos propios del Módulo 6. Todas las clases usan el prefijo "inc-"
+   para no afectar a los demás módulos; se apoyan en styles.css común. */
+.inc-modulo .tabs { margin: 0; flex-wrap: wrap; }
+.inc-cabecera { gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+.inc-cabecera h3 { margin: 0; }
+.panel .inc-cabecera { margin: 0 0 16px; }
+.inc-perfil-fila { display: flex; gap: 14px; flex-wrap: wrap; }
+.inc-perfil-fila label { flex: 1 1 220px; }
+.inc-filtros { display: flex; gap: 14px; align-items: flex-end; flex-wrap: wrap; }
+.inc-filtro { min-width: 180px; }
+.inc-check { flex-direction: row; align-items: center; gap: 8px; }
+.inc-check input { width: auto; }
+.inc-textarea { border: 1px solid #cfdcec; border-radius: 8px; padding: 11px; font: inherit; color: #233b55; width: 100%; resize: vertical; }
+.inc-textarea:focus { outline: 2px solid #b9d4ff; border-color: #1762e8; }
+.inc-sin-margen { margin-top: 0; }
+
+.inc-tabla td { vertical-align: top; }
+.inc-fila { cursor: pointer; }
+.inc-fila:hover td, .inc-fila.activa td { background: #f1f6ff; }
+.inc-sobrecarga td { background: #fff4f2; }
+
+.inc-badge { display: inline-flex; align-items: center; gap: 4px; border-radius: 20px; padding: 5px 9px; font-size: 11px; font-weight: 700; white-space: nowrap; background: #eef2f7; color: #4f6178; }
+.inc-alta { background: #ffe9e6; color: #b12a1d; }
+.inc-media { background: #fff3d9; color: #92600a; }
+.inc-baja { background: #e8f4ff; color: #1d5fa8; }
+.inc-sin { background: #f1f1f4; color: #7a7f8c; }
+.inc-ok { background: #e7f7ee; color: #157443; }
+.inc-pendiente { background: #fff5de; color: #926000; }
+.inc-reparacion { background: #e9efff; color: #2c4fb8; }
+.inc-cerrada { background: #e7f7ee; color: #157443; }
+
+.inc-detalle { border-color: #bcd3f7; }
+.inc-datos { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+.inc-datos > div { display: flex; flex-direction: column; gap: 5px; font-size: 13px; }
+.inc-datos span { font-size: 11px; color: #7d8ca3; text-transform: uppercase; letter-spacing: .06em; }
+.inc-descripcion { background: #f6f9fd; border-radius: 10px; padding: 12px 14px; font-size: 14px; }
+.inc-seccion { border-top: 1px solid #e9eef6; padding-top: 16px; margin-top: 18px; }
+.inc-seccion h4 { margin: 0 0 12px; font-size: 15px; }
+.inc-acciones { display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap; }
+.inc-acciones label { min-width: 170px; }
+.inc-form-linea { display: flex; gap: 10px; align-items: flex-end; }
+.inc-dos-columnas { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.inc-dos-columnas form { display: flex; flex-direction: column; gap: 10px; }
+.inc-lista { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-direction: column; gap: 8px; }
+.inc-lista li { display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; border: 1px solid #e9eef6; border-radius: 9px; font-size: 13px; }
+.inc-lista li span:last-child { color: #7d8ca3; font-size: 12px; }
+.inc-lista .inc-badge { align-self: flex-start; }
+.inc-vacio { color: #8594a8; }
+.inc-modulo button.inc-enlace { background: none !important; border: 0 !important; padding: 0 !important; color: #1762e8 !important; text-decoration: underline; font-weight: 700; }
+
+@media (max-width: 780px) {
+  .inc-dos-columnas { grid-template-columns: 1fr; }
+  .inc-form-linea { flex-direction: column; align-items: stretch; }
+}

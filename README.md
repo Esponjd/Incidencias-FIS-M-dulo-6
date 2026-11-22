@@ -1,3 +1,15 @@
+# LABFIS — Módulo 6 · Gestión de incidencias y reparaciones (Grupo 6)
+
+Copia del proyecto base LABFIS donde el **Grupo 6** implementa, en el espacio del módulo 06, la **Gestión de incidencias y reparaciones** (7 HU, 28 casos de prueba).
+
+- 📘 Documentación del módulo: [docs/modulo6_incidencias.md](docs/modulo6_incidencias.md)
+- 🗄️ Base de datos (modelo, RLS, verificación): [docs/base_de_datos_modulo6.md](docs/base_de_datos_modulo6.md)
+- 🧪 Casos de prueba: [docs/evidencias/siglab_casos_de_prueba.xlsx](docs/evidencias/siglab_casos_de_prueba.xlsx)
+- 💾 SQL: `supabase/02_modulo6_incidencias.sql` (esquema) y `supabase/03_modulo6_seed_pruebas.sql` (datos de prueba opcionales)
+- 💻 Código: `src/modules/incidencias/`
+
+---
+
 # LABFIS — Plantilla base para ocho equipos
 
 Aplicación React/Vite con estilo común y navegación a ocho módulos, un ejemplo docente **funcional** de solicitudes de impresión 3D y conexión a PostgreSQL mediante Supabase Auth y RLS.
@@ -59,7 +71,7 @@ VITE_SUPABASE_PUBLISHABLE_KEY=TU_CLAVE_PUBLICABLE
 | 3 | Reporte de daños | `danos` |
 | 4 | Llaves y accesos | `accesos` |
 | 5 | Reservas | `reservas` |
-| 6 | Apertura y cierre | `apertura` |
+| 6 | Gestión de incidencias y reparaciones (Grupo 6) | `incidencias` |
 | 7 | Inventario QR | `inventario` |
 | 8 | Dashboard | `dashboard` |
 
