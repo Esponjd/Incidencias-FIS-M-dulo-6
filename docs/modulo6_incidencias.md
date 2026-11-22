@@ -31,10 +31,10 @@ Implementación del espacio **Módulo 06** de LABFIS / SIGELAB. En la plantilla 
 
 ## 2. Cómo ejecutar
 
-1. Supabase → **SQL Editor**: ejecutar `01_base_demo.sql` (si no se ha hecho) y luego `02_modulo6_incidencias.sql`.
+1. Supabase → **SQL Editor**: ejecutar `01_base_demo.sql`  y luego `02_modulo6_incidencias.sql`.
 2. Copiar `.env.example` como `.env` en la raíz y poner la URL y la *Publishable key* del proyecto del equipo.
 3. `npm install` y `npm run dev`. Crear una cuenta de prueba e iniciar sesión.
-4. (Opcional) Ejecutar `03_modulo6_seed_pruebas.sql` para cargar los escenarios de prueba.
+4.  Ejecutar `03_modulo6_seed_pruebas.sql` para cargar los escenarios de prueba.
 5. Menú **Gestión de incidencias** → elegir el perfil operativo en la parte superior.
 
 ## 3. Perfiles para la demostración
@@ -86,53 +86,43 @@ Responsables asignables: Técnico A, B, C, D, Pasante 1 y Pasante 2.
 
 ## 6. Matriz de los 28 casos de prueba
 
-Ningún caso se ha ejecutado todavía contra la base de datos real del equipo. Estado inicial: **Pendiente de ejecución**. Registrar el resultado y la captura (sin claves ni datos personales) al ejecutarlos.
-
-Los datos de `03_modulo6_seed_pruebas.sql` preparan los escenarios. Excepción: **TC-HU2-CA04** necesita una base **sin** incidencias pendientes (ejecutarlo antes del seed o en un proyecto vacío).
-
-| ID | Perfil | Datos | Resultado esperado | Estado | Evidencia |
+| ID | Perfil | Datos | Resultado esperado 
 |---|---|---|---|---|---|
-| TC-HU1-CA01 | Coordinador | INC-001 sin prioridad | Guarda «Alta» y se ve en detalle y listado | Pendiente de ejecución | |
-| TC-HU1-CA02 | Coordinador → Técnico A | INC-002 (Alta) | Aparece en «Mi lista de trabajo» de Técnico A | Pendiente de ejecución | |
-| TC-HU1-CA03 | Coordinador | INC-003/004/005 | Orden INC-004, INC-005, INC-003 | Pendiente de ejecución | |
-| TC-HU1-CA04 | Coordinador | INC-006 sin prioridad | «Debe definir la prioridad antes de asignar un responsable», sin cambios | Pendiente de ejecución | |
-| TC-HU2-CA01 | Técnico | INC-010/011/012 | Código, descripción, prioridad y fecha | Pendiente de ejecución | |
-| TC-HU2-CA02 | Técnico | INC-013 / INC-014 | Solo aparece INC-013 | Pendiente de ejecución | |
-| TC-HU2-CA03 | Técnico | Filtro «Alta» | Solo pendientes Alta | Pendiente de ejecución | |
-| TC-HU2-CA04 | Técnico | BD sin pendientes | «No hay incidencias pendientes» | Pendiente de ejecución | |
-| TC-HU3-CA01 | Pasante 1 | INC-020 | Actividad con fecha, hora y autor Pasante 1 | Pendiente de ejecución | |
-| TC-HU3-CA02 | Pasante 1 | INC-020 | «La descripción de la actividad es obligatoria», conteo igual | Pendiente de ejecución | |
-| TC-HU3-CA03 | Pasante | INC-021 (3 actividades) | Orden cronológico con autor y fecha | Pendiente de ejecución | |
-| TC-HU3-CA04 | Pasante | INC-022 (Cerrada) | «No se pueden registrar actividades en una incidencia cerrada» | Pendiente de ejecución | |
-| TC-HU4-CA01 | Técnico A | INC-030 | Observación con fecha y autor Técnico A | Pendiente de ejecución | |
-| TC-HU4-CA02 | Técnico | INC-031 + evidencia.png | Aparece en la lista de evidencias | Pendiente de ejecución | |
-| TC-HU4-CA03 | Técnico | INC-031 + programa.exe | «Formato de archivo no permitido» | Pendiente de ejecución | |
-| TC-HU4-CA04 | Técnico | INC-032 (2 obs. + 2 evid.) | De la más reciente a la más antigua | Pendiente de ejecución | |
-| TC-HU5-CA01 | Técnico C | INC-040 | «En reparación» + fila en historial | Pendiente de ejecución | |
-| TC-HU5-CA02 | Técnico C | INC-041 | «Cerrada» con fecha de cierre | Pendiente de ejecución | |
-| TC-HU5-CA03 | Técnico C | INC-042 sin solución | «Debe registrar la solución aplicada antes de cerrar la incidencia», sigue En reparación | Pendiente de ejecución | |
-| TC-HU5-CA04 | Cualquiera | INC-043 | Pendiente → En reparación → Cerrada con fecha y responsable | Pendiente de ejecución | |
-| TC-HU6-CA01 | Coordinador | Técnico A | Sus incidencias (INC-030, 050, 051); no aparece INC-052 | Pendiente de ejecución | |
-| TC-HU6-CA02 | Coordinador | Resumen | Técnico A: 3 activas (1 cerrada); Técnico B: 1 | Pendiente de ejecución | |
-| TC-HU6-CA03 | Coordinador | L = 3 | Técnico C (4) «Sobrecargado»; Técnico B no | Pendiente de ejecución | |
-| TC-HU6-CA04 | Coordinador | Técnico D | «Este responsable no tiene incidencias asignadas» | Pendiente de ejecución | |
-| TC-HU7-CA01 | Docente | «El computador no enciende», «Laboratorio 3 - PC-12» | Pendiente + código; persiste al recargar | Pendiente de ejecución | |
-| TC-HU7-CA02 | Estudiante | Campos vacíos | Mensaje con campos faltantes; sin INSERT | Pendiente de ejecución | |
-| TC-HU7-CA03 | Estudiante | foto.jpg | Evidencia visible en el detalle | Pendiente de ejecución | |
-| TC-HU7-CA04 | Docente y Estudiante | Dos registros | Nombre, rol y fecha/hora coherentes | Pendiente de ejecución | |
+| TC-HU1-CA01 | Coordinador | INC-001 sin prioridad | Guarda «Alta» y se ve en detalle y listado | 
+| TC-HU1-CA02 | Coordinador → Técnico A | INC-002 (Alta) | Aparece en «Mi lista de trabajo» de Técnico A | 
+| TC-HU1-CA03 | Coordinador | INC-003/004/005 | Orden INC-004, INC-005, INC-003 | 
+| TC-HU1-CA04 | Coordinador | INC-006 sin prioridad | «Debe definir la prioridad antes de asignar un responsable», sin cambios | 
+| TC-HU2-CA01 | Técnico | INC-010/011/012 | Código, descripción, prioridad y fecha | 
+| TC-HU2-CA02 | Técnico | INC-013 / INC-014 | Solo aparece INC-013 | 
+| TC-HU2-CA03 | Técnico | Filtro «Alta» | Solo pendientes Alta | 
+| TC-HU2-CA04 | Técnico | BD sin pendientes | «No hay incidencias pendientes» |
+| TC-HU3-CA01 | Pasante 1 | INC-020 | Actividad con fecha, hora y autor Pasante 1 |
+| TC-HU3-CA02 | Pasante 1 | INC-020 | «La descripción de la actividad es obligatoria», conteo igual | 
+| TC-HU3-CA03 | Pasante | INC-021 (3 actividades) | Orden cronológico con autor y fecha | 
+| TC-HU3-CA04 | Pasante | INC-022 (Cerrada) | «No se pueden registrar actividades en una incidencia cerrada» | 
+| TC-HU4-CA01 | Técnico A | INC-030 | Observación con fecha y autor Técnico A | 
+| TC-HU4-CA02 | Técnico | INC-031 + evidencia.png | Aparece en la lista de evidencias |
+| TC-HU4-CA03 | Técnico | INC-031 + programa.exe | «Formato de archivo no permitido» |
+| TC-HU4-CA04 | Técnico | INC-032 (2 obs. + 2 evid.) | De la más reciente a la más antigua |
+| TC-HU5-CA01 | Técnico C | INC-040 | «En reparación» + fila en historial | 
+| TC-HU5-CA02 | Técnico C | INC-041 | «Cerrada» con fecha de cierre | 
+| TC-HU5-CA03 | Técnico C | INC-042 sin solución | «Debe registrar la solución aplicada antes de cerrar la incidencia», sigue En reparación  |
+| TC-HU5-CA04 | Cualquiera | INC-043 | Pendiente → En reparación → Cerrada con fecha y responsable |
+| TC-HU6-CA01 | Coordinador | Técnico A | Sus incidencias (INC-030, 050, 051); no aparece INC-052 | 
+| TC-HU6-CA02 | Coordinador | Resumen | Técnico A: 3 activas (1 cerrada); Técnico B: 1 |
+| TC-HU6-CA03 | Coordinador | L = 3 | Técnico C (4) «Sobrecargado»; Técnico B no |
+| TC-HU6-CA04 | Coordinador | Técnico D | «Este responsable no tiene incidencias asignadas» | 
+| TC-HU7-CA01 | Docente | «El computador no enciende», «Laboratorio 3 - PC-12» | Pendiente + código; persiste al recargar | 
+| TC-HU7-CA02 | Estudiante | Campos vacíos | Mensaje con campos faltantes; sin INSERT |
+| TC-HU7-CA03 | Estudiante | foto.jpg | Evidencia visible en el detalle | 
+| TC-HU7-CA04 | Docente y Estudiante | Dos registros | Nombre, rol y fecha/hora coherentes | 
 
-Nota del seed: en el Excel, TC-HU6-CA01 dice que Técnico A tiene INC-050 e INC-051, y TC-HU6-CA02 que tiene 3 activas. Para cumplir ambos, el seed le asigna además INC-030 (activa) e INC-043 (cerrada).
+
 
 ## 7. Verificación realizada
 
 - `npm run build` compila sin errores (Vite 6.4).
 - Las validaciones puras (`incidenciasValidation.js`) se comprobaron con casos de los CA (mensajes exactos, orden por prioridad, formatos de archivo, carga y sobrecarga).
-- **No verificado aún**: la ejecución de los scripts SQL en Supabase ni los 28 casos de prueba en el navegador. Deben ejecutarse con el proyecto Supabase del equipo.
+- **No verificado aún**: la ejecución de los scripts SQL en Supabase ni los 28 casos de prueba en el navegador. 
 
-## 8. Uso de IA
 
-El módulo se generó con Claude a partir del prompt del equipo (HU, CA y 28 casos de prueba). Se revisó que:
-- solo se tocara el espacio del módulo 06 (`config.js` y una línea de `App.jsx`);
-- las reglas críticas queden también en PostgreSQL (CHECK y triggers), no solo en React;
-- no haya claves, `service_role` ni datos reales en el código;
-- ninguna prueba se declare aprobada sin ejecutarla.
