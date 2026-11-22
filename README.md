@@ -10,7 +10,7 @@ Copia del proyecto base LABFIS donde el **Grupo 6** implementa, en el espacio de
 
 ---
 
-# LABFIS — Plantilla base para ocho equipos
+# LABFIS
 
 Aplicación React/Vite con estilo común y navegación a ocho módulos, un ejemplo docente **funcional** de solicitudes de impresión 3D y conexión a PostgreSQL mediante Supabase Auth y RLS.
 
@@ -104,4 +104,3 @@ Como estudiante quiero registrar una solicitud de impresión 3D, indicando descr
 5. Al menos dos pruebas manuales con evidencia.
 6. Código en repositorio sin credenciales privadas.
 
-> Este proyecto es un punto de partida académico. Los módulos están vacíos intencionalmente: deben construirse, probarse e integrarse. No usar con información institucional real.
