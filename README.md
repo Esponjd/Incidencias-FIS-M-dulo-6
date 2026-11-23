@@ -2,7 +2,7 @@
 
 Copia del proyecto base LABFIS donde el **Grupo 6** implementa, en el espacio del módulo 06, la **Gestión de incidencias y reparaciones** (7 HU, 28 casos de prueba).
 
-- Documentación del módulo: [docs/modulo6_incidencias.md](docs/modulo6_incidencias.md)
+- Documentación del módulo: [docs/modulo6_incidencias.md](docs/modulo6_incidencis.md)
 - Base de datos (modelo, RLS, verificación): [docs/base_de_datos_modulo6.md](docs/base_de_datos_modulo6.md)
 - Casos de prueba: [docs/evidencias/siglab_casos_de_prueba.xlsx](docs/evidencias/siglab_casos_de_prueba.xlsx)
 - SQL: `supabase/02_modulo6_incidencias.sql` (esquema) y `supabase/03_modulo6_seed_pruebas.sql` (datos de prueba opcionales)
@@ -103,4 +103,3 @@ Como estudiante quiero registrar una solicitud de impresión 3D, indicando descr
 4. Guardar + consultar desde el navegador, con recarga.
 5. Al menos dos pruebas manuales con evidencia.
 6. Código en repositorio sin credenciales privadas.
-
